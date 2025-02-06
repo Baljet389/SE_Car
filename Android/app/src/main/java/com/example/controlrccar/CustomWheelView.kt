@@ -15,7 +15,8 @@ import kotlin.math.sin
 class CustomWheelView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : View(context, attrs, defStyleAttr) {
-
+    //use numbers where 360 % numberLines = 0
+    private val numberLines = 3
     private val wheelPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = Color.LTGRAY
         style = Paint.Style.STROKE
@@ -40,13 +41,16 @@ class CustomWheelView @JvmOverloads constructor(
 
         // Draw the wheel
         canvas.drawCircle(centerX, centerY, radius, wheelPaint)
-
+        val angleBetLines: Int = 360/numberLines
         // Draw the indicator line
-        val indicatorX = (centerX + radius * cos(Math.toRadians(currentAngle.toDouble()))).toFloat()
-        val indicatorY = (centerY + radius * sin(Math.toRadians(currentAngle.toDouble()))).toFloat()
-        canvas.drawLine(centerX, centerY, indicatorX, indicatorY, indicatorPaint)
+        for (i in 1..numberLines) {
+            val indicatorX =
+                (centerX + radius * cos(Math.toRadians((currentAngle+i*angleBetLines).toDouble()))).toFloat()
+            val indicatorY =
+                (centerY + radius * sin(Math.toRadians((currentAngle+i*angleBetLines).toDouble()))).toFloat()
+            canvas.drawLine(centerX, centerY, indicatorX, indicatorY, indicatorPaint)
+        }
     }
-
     override fun onTouchEvent(event: MotionEvent): Boolean {
         val centerX = width / 2f
         val centerY = height / 2f

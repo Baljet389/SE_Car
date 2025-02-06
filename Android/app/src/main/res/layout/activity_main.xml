@@ -24,13 +24,13 @@
 
     <!-- Vertical Slider -->
     <SeekBar
-        android:id="@+id/verticalSlider"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
+        android:id="@+id/verticalSeekBar"
+        style="?android:attr/seekBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:rotation="270"
-        android:layout_gravity="center"
         android:max="100"
         android:progress="50"
-        android:thumb="@drawable/slider_thumb"
-        android:progressDrawable="@drawable/slider_progress" />
+        android:splitTrack="false"
+        />
 </LinearLayout>

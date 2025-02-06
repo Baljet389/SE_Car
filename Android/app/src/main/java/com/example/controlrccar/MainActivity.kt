@@ -11,9 +11,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val wheelView: CustomWheelView = findViewById(R.id.wheelView)
-        wheelView.onWheelChangeListener = { rotation ->
-            Toast.makeText(this, "Rotation: $rotation°", Toast.LENGTH_SHORT).show()
-        }
+
     }
 }
