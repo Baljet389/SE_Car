@@ -13,8 +13,6 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginEnd="16dp">
-
-        <!-- Use a third-party library or create your own -->
         <com.example.controlrccar.CustomWheelView
             android:id="@+id/wheelView"
             android:layout_width="match_parent"
