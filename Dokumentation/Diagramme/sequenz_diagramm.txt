@@ -5,8 +5,9 @@ participant "Raspberry" as PC
 participant "Motoren" as S1
 participant "Ultraschallsensor" as S2
 AC->system: Eingabe
-system->PC: Authentifizierung
-PC->system: Authentifizierungsbestätigung
+system->PC: Verbindungsanfrage
+PC->system: Verbindungsbestätigung
+system->AC: Verbindungsstatus
 system->PC:    Benutzereingabe
 S2->PC: Abstandsmessung
 PC->S1: Lenkung, Geschwindigkeitsregelung
