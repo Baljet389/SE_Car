@@ -1,34 +1,67 @@
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:gravity="center"
-    android:padding="16dp"
     tools:context=".MainActivity">
+    <!-- Horizontal container for Wheel and SeekBar -->
+    <LinearLayout
+        android:id="@+id/middleContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <!-- Wheel/Dial -->
-    <FrameLayout
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginEnd="16dp">
+        <!-- Custom Wheel View -->
         <com.example.controlrccar.CustomWheelView
             android:id="@+id/wheelView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="16dp" />
-    </FrameLayout>
+            android:layout_width="200dp"
+            android:layout_height="220dp"
+            android:layout_marginEnd="16dp"/>
 
-    <!-- Vertical Slider -->
-    <SeekBar
-        android:id="@+id/verticalSeekBar"
-        style="?android:attr/seekBarStyle"
+        <!-- Vertical SeekBar -->
+        <SeekBar
+            android:id="@+id/verticalSeekBar"
+            style="?android:attr/seekBarStyle"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="50"
+            android:rotation="270"
+            android:splitTrack="false"/>
+    </LinearLayout>
+
+    <!-- Bottom Navigation (Buttons) -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:rotation="270"
-        android:max="100"
-        android:progress="50"
-        android:splitTrack="false"
-        />
-</LinearLayout>
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Control"/>
+
+        <Button
+            android:id="@+id/btnShop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Connection"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

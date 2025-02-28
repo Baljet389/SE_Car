@@ -1,14 +1,15 @@
 package com.example.controlrccar
 import java.io.OutputStream
 import java.io.PrintWriter
+import  java.io.Serializable
 import java.net.Socket
 
-class RaspberryConnection {
+class RaspberryConnection:Serializable {
     private var socket: Socket? = null
     private var outputStream: OutputStream? = null
     private var writer: PrintWriter? = null
     var success:Boolean=false
-    fun connect(ip: String, port: Int) {
+    fun connect(ip: String, port: Int=1050) {
         Thread {
             try {
                 socket = Socket(ip, port)
