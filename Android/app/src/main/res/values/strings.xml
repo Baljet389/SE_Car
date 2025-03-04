@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Control RC Car</string>
+    <string name="app_name">Control RC Car
+            </string>
+    <string name="bottom_nav_1">control</string>
+    <string name="bottom_nav_2">connection</string>
+    <string name="Text_Field_IP">IP</string>
+
+
 </resources>

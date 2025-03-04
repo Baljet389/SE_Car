@@ -7,6 +7,7 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
+import kotlin.math.abs
 import kotlin.math.atan2
 import kotlin.math.cos
 import kotlin.math.min
@@ -28,7 +29,7 @@ class CustomWheelView @JvmOverloads constructor(
         strokeWidth = 10f
     }
 
-    private var currentAngle: Float = 0f
+    var currentAngle: Float = 0f
 
     var onWheelChangeListener: ((Float) -> Unit)? = null
 
@@ -41,6 +42,7 @@ class CustomWheelView @JvmOverloads constructor(
 
         // Draw the wheel
         canvas.drawCircle(centerX, centerY, radius, wheelPaint)
+
         val angleBetLines: Int = 360/numberLines
         // Draw the indicator line
         for (i in 1..numberLines) {
@@ -60,10 +62,19 @@ class CustomWheelView @JvmOverloads constructor(
         if (event.action == MotionEvent.ACTION_MOVE) {
             val angle = Math.toDegrees(atan2((y - centerY).toDouble(), (x - centerX).toDouble()))
             currentAngle = (if (angle < 0) angle + 360 else angle).toFloat()
+
+            if(abs(currentAngle.coerceIn(20f, 160f)-currentAngle) >=10f) return true
+
+            currentAngle = currentAngle.coerceIn(20f, 160f)
             invalidate()
 
             onWheelChangeListener?.invoke(currentAngle)
         }
         return true
+    }
+    fun setWheelAngle(angle: Float) {
+        currentAngle = angle.coerceIn(20f, 160f)
+        invalidate()
+        onWheelChangeListener?.invoke(currentAngle)
     }
 }

@@ -54,14 +54,14 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Control"/>
+            android:text="@string/bottom_nav_1"/>
 
         <Button
             android:id="@+id/btnShop"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Connection"/>
+            android:text="@string/bottom_nav_2"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
