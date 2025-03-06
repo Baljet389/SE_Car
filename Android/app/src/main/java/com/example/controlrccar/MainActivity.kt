@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
             if (abs(wheel.currentAngle.toInt() - lastAngle) > 5) {
                 val connection = ConnectionManager.connection
                 connection?.sendMessage(
-                   "s"+ seekbar.progress.toString()   +"a"+ wheel.currentAngle.toInt().toString()
+                    seekbar.progress.toString()   +"-"+ wheel.currentAngle.toInt().toString()
                 )
                 lastAngle=wheel.currentAngle.toInt()
             }
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 if(abs(progress-lastProgress)>5) {
                     val connection = ConnectionManager.connection
                     connection?.sendMessage(
-                        "s"+progress.toString()  + "a"+wheel.currentAngle.toInt().toString()
+                        progress.toString()  +"-"+wheel.currentAngle.toInt().toString()
                     )
                     lastProgress=progress
                 }

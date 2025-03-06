@@ -1,5 +1,7 @@
 import network
 import time
+
+
 def connect(ssid,password):
     wlan = network.WLAN(network.STA_IF)
     wlan.active(True)
