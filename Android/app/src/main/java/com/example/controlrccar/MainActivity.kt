@@ -8,8 +8,8 @@ import android.content.Intent
 import kotlin.math.abs
 
 class MainActivity : AppCompatActivity() {
-    var lastAngle:Int =90;
-    var lastProgress:Int =50;
+    var lastAngle:Int =90
+    var lastProgress:Int =50
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
             if (abs(wheel.currentAngle.toInt() - lastAngle) > 5) {
                 val connection = ConnectionManager.connection
                 connection?.sendMessage(
-                    seekbar.progress.toString() + "--" + wheel.currentAngle.toInt().toString()
+                   "s"+ seekbar.progress.toString()   +"a"+ wheel.currentAngle.toInt().toString()
                 )
-                lastAngle=wheel.currentAngle.toInt();
+                lastAngle=wheel.currentAngle.toInt()
             }
         }
         val btnConnection: Button= findViewById(R.id.btnShop)
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 if(abs(progress-lastProgress)>5) {
                     val connection = ConnectionManager.connection
                     connection?.sendMessage(
-                        progress.toString() + "--" + wheel.currentAngle.toInt().toString()
+                        "s"+progress.toString()  + "a"+wheel.currentAngle.toInt().toString()
                     )
                     lastProgress=progress
                 }
