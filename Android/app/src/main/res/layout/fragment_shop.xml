@@ -1,3 +1,30 @@
+<!-- *****************************************************************************
+     * Copyright 2012-2025, All rights reserved, For internal use only
+     *
+     * FILE: fragment_shop.xml
+     * PROJECT: RC Car Controller
+     * MODULE: UI Layout
+     *
+     * Description:
+     * XML layout file for the second activity of the RC Car Controller app.
+     * It includes:
+     * - A bottom navigation bar with buttons for navigation.
+     * - A middle container with an EditText for IP input and a confirmation button.
+     *
+     * Notes:
+     * - The EditText allows users to enter the Raspberry Pi's IP address.
+     * - The confirmation button triggers the connection setup.
+     * - Buttons allow navigation to different screens.
+     *
+     * Compiler dependencies or special instructions:
+     * - Requires correct namespace declarations for Android and ConstraintLayout.
+     * - Uses auto-generated string resources for button text.
+     *
+     * REVISION HISTORY
+     * Date:        By:            Description:
+     * 2025-03-12   Jacob Jaeger   Initial implementation and documentation update.
+     *
+     ***************************************************************************** -->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"

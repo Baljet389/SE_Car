@@ -1,3 +1,30 @@
+<!-- *****************************************************************************
+     * Copyright 2012-2025, All rights reserved, For internal use only
+     *
+     * FILE: activity_main.xml
+     * PROJECT: RC Car Controller
+     * MODULE: UI Layout
+     *
+     * Description:
+     * XML layout file for the main activity of the RC Car Controller app.
+     * It includes:
+     * - A horizontal container with a custom wheel control and a vertical SeekBar.
+     * - A bottom navigation bar with buttons for navigation.
+     *
+     * Notes:
+     * - The CustomWheelView provides steering control.
+     * - The SeekBar controls speed or throttle.
+     * - Buttons allow navigation to different screens.
+     *
+     * Compiler dependencies or special instructions:
+     * - Requires correct namespace declarations for Android and ConstraintLayout.
+     * - Uses auto-generated string resources for button text.
+     *
+     * REVISION HISTORY
+     * Date:        By:            Description:
+     * 2025-03-12   Jacob Jaeger   Initial implementation and documentation update.
+     *
+     ***************************************************************************** -->
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"

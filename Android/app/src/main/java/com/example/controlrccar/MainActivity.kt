@@ -1,3 +1,30 @@
+/*****************************************************************************
+ * Copyright 2012-2025, All rights reserved, For internal use only
+ *
+ * FILE: MainActivity.kt
+ * PROJECT: RC Car Controller
+ * MODULE: Main Application
+ *
+ * Description:
+ * The main activity of the RC Car Controller app. It initializes the user interface,
+ * handles interactions with the CustomWheelView and SeekBar, and sends control commands
+ * via the ConnectionManager.
+ *
+ * Notes:
+ * - The wheel view allows steering control.
+ * - The SeekBar controls speed or throttle.
+ * - Changes beyond a threshold trigger messages to the connection.
+ * - A button navigates to the ShopFragment.
+ *
+ * Compiler dependencies or special instructions:
+ * - Requires Android API level 21 (Lollipop) or higher.
+ * - Uses Kotlin standard functions.
+ *
+ * REVISION HISTORY
+ * Date:        By:            Description:
+ * 2025-03-12   Jacob Jaeger   Initial implementation and documentation update.
+ *
+ *****************************************************************************/
 package com.example.controlrccar
 
 import android.os.Bundle

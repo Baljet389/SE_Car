@@ -1,3 +1,29 @@
+/*****************************************************************************
+ * Copyright 2012-2025, All rights reserved, For internal use only
+ *
+ * FILE: CustomWheelView.kt
+ * PROJECT: RC Car Controller
+ * MODULE: UI Components
+ *
+ * Description:
+ * Custom view for a wheel-like control that allows the user to rotate an indicator
+ * within a predefined range. The wheel is divided into segments, and interaction
+ * is handled via touch gestures.
+ *
+ * Notes:
+ * - The wheel is drawn with a specified number of indicator lines.
+ * - Supports touch input to adjust the wheel angle.
+ * - Angle changes trigger a listener callback.
+ *
+ * Compiler dependencies or special instructions:
+ * - Requires Android API level 21 (Lollipop) or higher.
+ * - Uses Kotlin standard math functions.
+ *
+ * REVISION HISTORY
+ * Date:        By:            Description:
+ * 2025-03-12   Jacob Jaeger    Initial implementation and documentation update.
+ *
+ *****************************************************************************/
 package com.example.controlrccar
 
 import android.content.Context

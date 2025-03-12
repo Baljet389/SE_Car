@@ -1,3 +1,29 @@
+/*****************************************************************************
+ * Copyright 2012-2025, All rights reserved, For internal use only
+ *
+ * FILE: ShopFragment.java
+ * PROJECT: RC Car Controller
+ * MODULE: UI Components
+ *
+ * Description:
+ * This activity serves as a settings interface where users can configure
+ * the Raspberry Pi connection by entering an IP address. It also provides
+ * navigation back to the main activity.
+ *
+ * Notes:
+ * - Allows users to set the Raspberry Pi's IP address and initiate a connection.
+ * - Includes a button to return to the MainActivity.
+ * - Logs errors if connection components are null.
+ *
+ * Compiler dependencies or special instructions:
+ * - Requires internet permissions in AndroidManifest.xml.
+ * - Uses Java 8 features like lambda expressions.
+ *
+ * REVISION HISTORY
+ * Date:        By:            Description:
+ * 2025-03-12   Jacob Jaeger   Initial implementation and documentation update.
+ *
+ *****************************************************************************/
 package com.example.controlrccar;
 
 import android.content.Intent;
