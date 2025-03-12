@@ -34,7 +34,6 @@ import android.util.Log;
 
 import android.widget.EditText;
 public class ShopFragment extends AppCompatActivity {
-    RaspberryConnection connection;
 
 
     @Override
