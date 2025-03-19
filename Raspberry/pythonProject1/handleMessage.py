@@ -1,7 +1,7 @@
-import re
 from machine import Pin, PWM
 
 def SplitMessage(message):
+    print(message)
     try:
         if "-" in message:
             seekbar, angle = message.split("-")
@@ -9,11 +9,15 @@ def SplitMessage(message):
             return
     except Exception as e:
         return
-    print("Seekbar"+seekbar)  # 100: forward 0: backward 50: neutral
-    if seekbar >70:
-        pwm0 = PWM(Pin(0), freq=2000, duty_u16=32768)
-    if seekbar <70:
-        pwm1 = PWM(Pin(1), freq=0, duty_u16 = 32768)
-        
-    print("Angle"+angle)  # 160: go right 20: go left 90: neutral
+    # 100: forward 0: backward 50: neutral
+    # 160: go right 20: go left 90: neutral
+    pin8 = machine.Pin(8, machine.Pin.OUT)  # Pin 8 als Ausgang setzen
+    pin13 = machine.Pin(13, machine.Pin.OUT)  # Pin 8 als Ausgang setzen
+    if int(seekbar) > 70:
+        pin13.value(1)
+        pin8.value(1)  # Pin 8 auf HIGH (3.3V)    else:
+    else:
+        pin13.value(0)
+        pin8.value(0)
+     
 

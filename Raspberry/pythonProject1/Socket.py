@@ -50,6 +50,7 @@ def tcp_listener():
                 data = client_socket.recv(1024)
                 if not data:
                     break
+
                 SplitMessage(data.decode())
         except Exception as e:
             print(f"Error reading data: {e}")
