@@ -1,4 +1,4 @@
-<!-- *****************************************************************************
+    <!-- *****************************************************************************
      * Copyright 2012-2025, All rights reserved, For internal use only
      *
      * FILE: activity_main.xml
@@ -45,7 +45,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <!-- Custom Wheel View -->
-        <com.example.controlrccar.CustomWheelView
+        <com.car482.android.CustomWheelView
             android:id="@+id/wheelView"
             android:layout_width="200dp"
             android:layout_height="220dp"

@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.controlrccar"
+    namespace = "com.car482.android"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.controlrccar"
+        applicationId = "com.car482.android"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
